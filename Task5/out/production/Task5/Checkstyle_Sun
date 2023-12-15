@@ -1,0 +1,9 @@
+Checkstyle found 7 item(s) in 1 file(s)
+AverageComparator.java : 7 item(s)
+Файл не заканчивается пустой строкой. (1:0) [NewlineAtEndOfFile]
+Пропущен файл package-info.java. (1:0) [JavadocPackage]
+Похоже, что класс 'AverageComparator' предназначен для расширения (может быть подклассом), но у метода 'compareAverages' нет javadoc с описанием того, как это безопасно сделать. Если класс не предназначен для расширения, то сделайте класс 'AverageComparator' final или сделайте метод 'compareAverages' static/final/abstract/пустым, или добавьте методу разрешенную аннотацию. (4:5) [DesignForExtension]
+Пропущен Javadoc комментарий. (4:5) [MissingJavadocMethod]
+Параметр list1 должен быть final. (4:35) [FinalParameters]
+Параметр list2 должен быть final. (4:55) [FinalParameters]
+Параметр list должен быть final. (17:37) [FinalParameters]

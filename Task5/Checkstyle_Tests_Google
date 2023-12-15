@@ -1,0 +1,3 @@
+Checkstyle found 1 item(s) in 1 file(s)
+AverageComparatorTest.java : 1 item(s)
+Лишнее разделение в группе импорта перед 'org.junit.Before' (6:1) [CustomImportOrder]

@@ -1,0 +1,167 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=windows-1251"> 
+  <title>Coverage Report > AverageComparatorTest</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">&lt;empty package name&gt;</a>
+</div>
+
+<h1>Coverage Summary for Class: AverageComparatorTest (&lt;empty package name&gt;)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">AverageComparatorTest</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (6/6)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (18/18)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;import static org.junit.Assert.assertEquals;
+&nbsp;
+&nbsp;import java.util.Arrays;
+&nbsp;import java.util.List;
+&nbsp;
+&nbsp;import org.junit.Before;
+&nbsp;import org.junit.Test;
+&nbsp;
+&nbsp;@SuppressWarnings({&quot;checkstyle:Indentation&quot;, &quot;checkstyle:MissingJavadocType&quot;})
+<b class="fc">&nbsp;public class AverageComparatorTest {</b>
+&nbsp;    @SuppressWarnings(&quot;checkstyle:Indentation&quot;)
+&nbsp;    private AverageComparator comparator;
+&nbsp;
+&nbsp;    @SuppressWarnings(&quot;checkstyle:Indentation&quot;)
+&nbsp;    @Before
+&nbsp;    public void setUp() {
+<b class="fc">&nbsp;        comparator = new AverageComparator();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @SuppressWarnings(&quot;checkstyle:Indentation&quot;)
+&nbsp;    @Test
+&nbsp;    public void testCompareAverages_FirstListIsGreater() {
+<b class="fc">&nbsp;        List&lt;Double&gt; list1 = Arrays.asList(2.0, 3.0, 4.0);</b>
+<b class="fc">&nbsp;        List&lt;Double&gt; list2 = Arrays.asList(1.0, 2.0, 3.0);</b>
+&nbsp;
+<b class="fc">&nbsp;        String result = comparator.compareAverages(list1, list2);</b>
+&nbsp;
+<b class="fc">&nbsp;        assertEquals(&quot;Первый список имеет большее среднее значение&quot;, result);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @SuppressWarnings(&quot;checkstyle:Indentation&quot;)
+&nbsp;    @Test
+&nbsp;    public void testCompareAverages_SecondListIsGreater() {
+<b class="fc">&nbsp;        List&lt;Double&gt; list1 = Arrays.asList(1.0, 2.0, 3.0);</b>
+<b class="fc">&nbsp;        List&lt;Double&gt; list2 = Arrays.asList(2.0, 3.0, 4.0);</b>
+&nbsp;
+<b class="fc">&nbsp;        String result = comparator.compareAverages(list1, list2);</b>
+&nbsp;
+<b class="fc">&nbsp;        assertEquals(&quot;Второй список имеет большее среднее значение&quot;, result);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @SuppressWarnings(&quot;checkstyle:Indentation&quot;)
+&nbsp;    @Test
+&nbsp;    public void testCompareAverages_AveragesAreEqual() {
+<b class="fc">&nbsp;        List&lt;Double&gt; list1 = Arrays.asList(1.0, 2.0, 3.0);</b>
+<b class="fc">&nbsp;        List&lt;Double&gt; list2 = Arrays.asList(1.0, 2.0, 3.0);</b>
+&nbsp;
+<b class="fc">&nbsp;        String result = comparator.compareAverages(list1, list2);</b>
+&nbsp;
+<b class="fc">&nbsp;        assertEquals(&quot;Средние значения равны&quot;, result);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @SuppressWarnings(&quot;checkstyle:Indentation&quot;)
+&nbsp;    @Test
+&nbsp;    public void testCompareAverages_EmptyLists() {
+<b class="fc">&nbsp;        List&lt;Double&gt; list1 = List.of();</b>
+<b class="fc">&nbsp;        List&lt;Double&gt; list2 = List.of();</b>
+&nbsp;
+<b class="fc">&nbsp;        String result = comparator.compareAverages(list1, list2);</b>
+&nbsp;
+<b class="fc">&nbsp;        assertEquals(&quot;Средние значения равны&quot;, result);</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-12-15 17:26</div>
+</div>
+</body>
+</html>
